@@ -212,7 +212,7 @@
 				imagesLoaded: true,
 				autoPlay: 6000,
 				pauseAutoPlayOnHover: true,
-				arrowShape: arrowStyle,
+				arrowShape: "M 10,50 L 70,100 L 70,90 L 70,50  L 70,10 L 70,0 Z",
 				initialIndex: 0,
 				friction: 1,
 				selectedAttraction: 1,
