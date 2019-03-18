@@ -258,14 +258,14 @@ html{
 		background-color: $color-1;
 		margin-left: 3px;
 		margin-right: 3px;
-		height: 10px;
-		width: 10px;
+		height: 13px;
+		width: 13px;
 		display: inline-block;
 		border-radius: 50%;
-		&.is-selected{
+		&.is-selected, &.active{
 			z-index: 2;
 			position: relative;
-			background-color: $color-gray-1;
+			background-color: #eeeeee;
 		}
 	}
 
@@ -548,9 +548,12 @@ div.owl-nav{
 	}
 }
 .owl-dots{
+	padding-top: 30px;
+	padding-bottom: 30px;
 	margin-left: -5px;
 	margin-right: -5px;
 	@extend .carousel-dots;
+	position: absolute;
 }
 .owl-prev{
 	margin-right: 5px;
@@ -564,55 +567,53 @@ div.owl-nav{
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	transform: translateY(-30px);
-	height: 0;
 	[class*="owl-"].disabled{
 		.owl-btn{
-			background-color: $color-gray-1;
-			.arrow{
-				fill: $color-2;
-			}
+			//background-color: $color-gray-1;
+			opacity: 0.3;
 		}
 	}
 	.owl-prev{
 		top: 0;
 		.owl-btn{
 			left: 0;
-			clip-path: polygon(80% 0, 80% 100%, 0 50%);
 		}
 	}
 	.owl-next{
 		.owl-btn{
 			right: 0;
-			clip-path: polygon(20% 0, 20% 100%, 100% 50%);
 		}
 	}
+	@media (max-width: 991px) {
+		position: relative;
+		padding: 30px 0;
+	}
 }
-
+.owl-prev, .owl-next{
+	//top: 50%;
+	//position: absolute;
+}
 .owl-btn{
-	background-color: $color-2;
+	background-color: white;
 	transition: all 0.3s ease;
-	top: 50%;
-	width: 40px;
-	height: 60px;
+	width: 48px;
+	height: 48px;
 	z-index:2;
 	display: inline-block;
 	border-radius: 0;
+	border: 1px solid $color-1;
 	display: flex;
 	align-items: center;
-	position: absolute;
 	&:hover, &:focus{
 		opacity: 1;
-		background-color: $color-2;
+		background-color: $color-1;
 		.arrow{
-			//fill: $color-1;
+			fill: white;
 		}
 	}
 	.arrow{
-		fill: white;
+		fill: $color-1;
 	}
-
-	
 	svg{
 		width: 50px;
 		display: block;
@@ -620,7 +621,6 @@ div.owl-nav{
 		//display: inline-block;
 	}
 	.arrow{
-		fill: white;
 		transform: scale(0.08);
     transform-origin: 32% 32%;
 	}
@@ -630,5 +630,22 @@ div.owl-nav{
 		}
 	}
 }
-
+.owl-btn-1{
+	.owl-nav{
+		top: auto;
+		@media (min-width: 992px) {
+			bottom: -65px;
+		}
+	}	
+	.owl-prev{
+		right: 60px;
+	}
+	.owl-next{
+		right: 0;
+	}
+	// .owl-btn.previous{
+	// 	left: auto;
+	// 	right: 60px;
+	// }
+}
 

@@ -4,7 +4,7 @@
 		--Variables--
 */
 
-$color-1: #6d1815 !default;
+$color-1: #792120 !default;
 $color-2: #380907 !default;//
 $color-3: #d61717 !default;
 $color-4: #e00579 !default;
@@ -18,7 +18,7 @@ $font-family-3: "sans-serif";
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray-1: #eaeaea; //#bdbdbd
+$color-gray-1: #ededed; //#bdbdbd
 $color-gray-2: #d8d8d8;
 $color-gray-3: #343434;
 
@@ -555,6 +555,7 @@ table {
 	button{
 		width: 100%;
 		font-weight: inherit;
+		text-transform: uppercase;
 	}
 	a, button, .btn-this{		
 		line-height: normal;
@@ -890,8 +891,9 @@ h1{
 	font-size: em(32, 15);
 	margin-bottom: 15px;
 	font-weight: 800;
+	text-transform: uppercase;
 	@media (max-width: 991px) {
-		font-size: em(40/1.2, 15);
+		font-size: em(20, 15);
 	}
 }
 h2{
@@ -899,14 +901,14 @@ h2{
 	margin-bottom: 15px;
 	font-weight: 700;
 	@media (max-width: 430px) {
-		font-size: em(25/1.2, 15);
+		font-size: em(18/1.2, 15);
 	}
 } 
 h3{
 	font-weight: 600;
 	font-size: em(22, 15);
 	@media (max-width: 430px) {
-		font-size: em(22/1.1, 15);
+		font-size: em(17/1.1, 15);
 	}
 }
 h4{
@@ -1097,9 +1099,6 @@ textarea.pie-form-control{
 	min-height: 120px;
 	&:not([class*="box-"]):not([class*="col-"]){
 		width: 100%;
-	}
-	&:focus{
-		border-color: transparent;
 	}
 }
 select.pie-form-control{
