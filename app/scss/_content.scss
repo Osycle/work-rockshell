@@ -536,3 +536,33 @@ figcaption{
 		min-height: 190px;
 	}
 }
+
+
+
+
+//gallery-items
+.gallery-items{
+	display: flex;
+	flex-wrap: wrap;
+	figure{
+		width: 50%;
+		padding-left: 15px;
+		padding-right: 15px;
+		@media (min-width: 992px) {
+			&:nth-child(6n+3), &:nth-child(6n+4), &:nth-child(6n+5), &:nth-child(6n+6){
+				width: 25%;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		flex-direction: column;
+		figure{
+			width: 100%;
+		}
+	}
+	.img{
+		background-position: center;
+		background-size: cover;
+		height: 310px;
+	}
+}
