@@ -462,6 +462,7 @@ table {
 	opacity: 0;
 	padding: 0 5%;
 	background-color: rgba(black, 0.7);
+	background-clip: border-box;
 	@extend .fuller;
 	pointer-events: none;
 	transition: all 0.3s ease-in-out;
@@ -995,7 +996,7 @@ main{
 	}
 	
 	p{
-		font-size: 1em;
+		font-size: 0.93em;
 		//font-weight: 400;
 		position: relative;
 		line-height: 150%;
@@ -1122,6 +1123,7 @@ textarea.pie-form-control{
 	padding: 10px 12px;
 	box-shadow: inset 1px 3px 25px -13px black;
 	min-height: 120px;
+	border-radius: 5px;
 	&:not([class*="box-"]):not([class*="col-"]){
 		width: 100%;
 	}

@@ -566,3 +566,200 @@ figcaption{
 		height: 310px;
 	}
 }
+
+
+
+
+
+
+
+.quarry-items{
+	$item-height: 510px;
+	.box{
+		@media (min-width: 992px) {
+			&:nth-child(4){
+				.main-img{
+					float: right;
+				}
+			}
+		}
+	}
+	figure{
+		//display: flex;
+	}
+	.main-img{
+		.img{
+			height: $item-height;
+		}
+	}
+	.img-content{
+		.img{
+			height: 260px;
+		}
+	}
+	.img{
+		background-size: cover;
+		background-position: center;
+	}
+	.desc-content{
+		border: 10px solid #d9d9d9;
+		text-align: center;
+		height: 220px;
+		padding-left: 10px;
+		padding-right: 10px;
+		display: flex;
+		overflow-y: auto;
+		align-items: center;
+		h3,h4{
+			color: $color-1;
+		}
+		@media (max-width: 991px) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+
+
+
+//bricktype
+.bricktype-items{
+	.img{
+		height: 250px;
+		background-position: center;
+		background-size: cover;
+	}
+	.wrapper{
+		box-shadow: 0 0 30px -6px rgba(black, 0.3);
+		border: 2px solid transparent;
+		background-color: white;
+		padding: 15px 15px;
+	}
+	h5{
+		color: $color-1;
+	}
+	figure{
+		&:hover{
+			.wrapper{
+				border-color: $color-3;
+			}
+		}
+	}
+}
+
+
+//contacts
+.contacts-items{
+	.img-content{
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		background-color: #1a1a1a;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 46px;
+		@media (min-width: 992px) {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+
+//certifications
+.certifications-items{
+	.img{
+		height: 520px;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+
+
+//terrazzo
+.terrazzo-type-items{
+	.img{
+		background-position: center;
+		background-size: cover;
+		height: 310px;
+	}
+	.desc-content{
+		background-color: rgba(white, 0.7);
+		text-align: center;
+		transition: all 0.3s ease;
+		height: 310px;
+	}
+	h1{
+		text-transform: none;
+	}
+	figure{
+		&:hover{
+			.desc-content{
+				background-color: $color-1;
+				color: white;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		.desc-content{
+			height: 230px;
+		}
+	}
+}
+
+
+
+//vacancy
+.vacancy-accordion{
+	.panel-default{
+		//border-color: transparent;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+	}
+	.panel-heading{
+		background-color: transparent;
+		padding: 0;
+		h4{
+			text-transform: none;
+		}
+		.fa{
+			position: absolute;
+			right: 15px;
+			transform: rotate(180deg);
+			top: 14px;
+		}
+		a{
+			display: block;
+			padding: 10px 15px;
+			transition: all 0.3s ease;
+			border-radius: 5px;
+			//border: 1px solid $color-2;
+			background-color: lighten($color-gray-1, 5%);
+			&:not(.collapsed){
+				color: white;
+				background-color: $color-2;
+				.fa{
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	.panel-body, .panel-default{
+		border: none !important;
+	}
+}
+
+
+
+//reviews
+.reviews-items{
+	.boxes-cell{
+		background-color: white;
+		padding: 10px 15px;
+		box-shadow: 0 0 30px -6px rgba(black, 0.3);
+	}
+}
