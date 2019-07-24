@@ -8783,6 +8783,9 @@ figcaption {
 .bnr-slider {
   position: relative;
   overflow: hidden; }
+  @media (max-width: 991px) {
+    .bnr-slider {
+      display: none; } }
 
 .bnr-carousel {
   background-color: white;
